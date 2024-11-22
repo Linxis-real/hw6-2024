@@ -8,15 +8,6 @@ window.addEventListener("load", function() {
 	console.log("Autoplay Disabled")
 	video.loop = false;
 	console.log("Looping Disabled")
-
-	// Set the initial value of the slider and volume display
-    const slider = document.querySelector("#slider");
-    const volumeSpan = document.querySelector("#volume");
-
-    // Set the initial volume;
-    slider.value = video.volume * 100;
-	// Display initial volume;
-    volumeSpan.textContent = Math.round(video.volume * 100) + "%";
 });
 
 
@@ -25,6 +16,13 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	// Set the initial value of the slider and volume display
+	const slider = document.querySelector("#slider");
+	const volumeSpan = document.querySelector("#volume");
+	// Set the initial volume;
+	slider.value = video.volume * 100;
+	// Display initial volume;
+	volumeSpan.textContent = Math.round(video.volume * 100) + "%";
 });
 
 // Pause the Video;
